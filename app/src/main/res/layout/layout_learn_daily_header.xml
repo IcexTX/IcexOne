@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--indicator_height:指示器圆形按钮的高度
+    indicator_margin:指示器圆形按钮的宽度
+    indicator_width:指示器的边距
+    is_auto_play:是否自动轮播
+    -->
+    <com.youth.banner.Banner
+        android:id="@+id/header_banner"
+        android:layout_width="match_parent"
+        android:layout_height="140dip"
+        android:background="@mipmap/img_three_bg"
+        app:image_scale_type="fit_xy"
+        app:indicator_drawable_selected="@mipmap/banner_red"
+        app:indicator_drawable_unselected="@mipmap/banner_grey"
+        app:indicator_height="8dip"
+        app:indicator_margin="6dip"
+        app:indicator_width="8dip"
+        app:is_auto_play="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dip"
+        android:layout_marginTop="15dip">
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtn_personal"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:background="@drawable/learn_daily_recommend_style" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:text="@string/private_fm"
+                android:textColor="@color/cc_black"
+                android:textSize="@dimen/font_thirteen" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="60dip"
+                android:layout_height="60dip">
+
+                <ImageButton
+                    android:id="@+id/imgBtn_recommended"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:background="@drawable/learn_daily_day_style" />
+
+                <TextView
+                    android:id="@+id/tv_day_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="XX"
+                    android:textColor="@color/learn_daily_day_text"
+                    android:textSize="@dimen/font_twenty_two" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:text="@string/recommended_daily"
+                android:textColor="@color/cc_black"
+                android:textSize="@dimen/font_thirteen" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtn_read"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:background="@drawable/learn_daily_recommend_style" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:text="@string/read_hot_list"
+                android:textColor="@color/cc_black"
+                android:textSize="@dimen/font_thirteen" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

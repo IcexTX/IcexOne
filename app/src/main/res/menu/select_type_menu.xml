@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:id="@+id/menu_all"
+            android:icon="@mipmap/learn_daily_day_all"
+            android:title="全部" />
+
+        <item
+            android:id="@+id/menu_android"
+            android:icon="@mipmap/learn_daily_day_android"
+            android:title="Android" />
+
+        <item
+            android:id="@+id/menu_ios"
+            android:icon="@mipmap/learn_daily_day_ios"
+            android:title="iOS" />
+
+        <item
+            android:id="@+id/menu_movie"
+            android:icon="@mipmap/learn_daily_day_movie"
+            android:title="休息视频" />
+
+        <item
+            android:id="@+id/menu_move"
+            android:icon="@mipmap/learn_daily_day_web"
+            android:title="前端" />
+
+        <item
+            android:id="@+id/menu_recommend"
+            android:icon="@mipmap/learn_daily_day_recommend"
+            android:title="瞎推荐" />
+
+        <item
+            android:id="@+id/menu_resources"
+            android:icon="@mipmap/learn_daily_day_resources"
+            android:title="拓展资源" />
+
+        <item
+            android:id="@+id/menu_app"
+            android:icon="@mipmap/learn_daily_day_app"
+            android:title="App" />
+</menu>

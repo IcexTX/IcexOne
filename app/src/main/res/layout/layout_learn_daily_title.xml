@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dip"
+    android:layout_marginRight="8dip"
+    android:layout_marginTop="12dip"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/img_header"
+        android:layout_width="23dip"
+        android:layout_height="23dip"
+        android:layout_marginRight="3dip"
+        android:background="@mipmap/learn_daily_day_android" />
+
+    <TextView
+        android:id="@+id/title_name"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:text="android"
+        android:textColor="@color/daily_day_text"
+        android:textSize="@dimen/font_seventeen" />
+
+    <LinearLayout
+        android:id="@+id/layout_more"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/more"
+            android:textColor="@color/daily_day_text"
+            android:textSize="@dimen/font_fourteen" />
+
+        <ImageView
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:src="@mipmap/learn_daily_day_two_right" />
+    </LinearLayout>
+
+
+</LinearLayout>

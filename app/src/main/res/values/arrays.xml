@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--临时主题-->
+    <string-array name="SkinData">
+        <item>skin_green.skin</item>
+        <item>skin_brown.skin</item>
+        <item>skin_black.skin</item>
+    </string-array>
+
+    <!--读书-->
+    <string-array name="BookList">
+        <item>综合</item>
+        <item>文学</item>
+        <item>生活</item>
+        <item>养生</item>
+        <item>科学</item>
+        <item>编程</item>
+    </string-array>
+
+    <!--读书-->
+    <string-array name="LearnList">
+        <item>每日推荐</item>
+        <item>福利图集</item>
+        <item>干货定制</item>
+        <item>知识回顾</item>
+    </string-array>
+
+</resources>

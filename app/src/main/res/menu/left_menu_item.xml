@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_discover"
+            android:icon="@mipmap/main_learn_normal"
+            android:title="个人" />
+
+        <item
+            android:id="@+id/menu_music"
+            android:icon="@mipmap/main_music_normal"
+            android:title="音乐" />
+
+        <item
+            android:id="@+id/menu_friends"
+            android:icon="@mipmap/main_friends_normal"
+            android:title="朋友" />
+
+        <item
+            android:id="@+id/menu_read"
+            android:icon="@mipmap/main_friends_normal"
+            android:title="读书" />
+
+        <item
+            android:id="@+id/menu_move"
+            android:icon="@mipmap/main_friends_normal"
+            android:title="电影" />
+
+        <item
+            android:id="@+id/menu_switch_skin"
+            android:icon="@mipmap/main_friends_normal"
+            android:title="主题皮肤" />
+
+        <item android:title="其他">
+            <menu>
+                <item
+                    android:id="@+id/menu_about"
+                    android:checkable="true"
+                    android:icon="@mipmap/main_friends_normal"
+                    android:title="关于" />
+                <item
+                    android:id="@+id/menu_retroaction"
+                    android:checkable="true"
+                    android:icon="@mipmap/main_friends_normal"
+                    android:title="反馈" />
+                <item
+                    android:id="@+id/menu_update"
+                    android:checkable="true"
+                    android:icon="@mipmap/main_friends_normal"
+                    android:title="检查升级" />
+
+            </menu>
+        </item>
+    </group>
+
+</menu>

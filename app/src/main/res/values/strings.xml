@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">IcexOne</string>
+    <string name="setting">设置</string>
+    <string name="exit">退出程序</string>
+    <string name="replace_skin">更换皮肤</string>
+    <string name="search">搜索</string>
+    <string name="private_fm">私人FM</string>
+    <string name="recommended_daily">每日推荐</string>
+    <string name="read_hot_list">阅读热榜</string>
+    <string name="adjust_the_instructions">现在可以根据个人喜好，自由调整栏目顺序啦</string>
+    <string name="Adjust_the_order">调整栏目顺序</string>
+    <string name="loading_more">努力加载中...</string>
+    <string name="more">更多</string>
+</resources>

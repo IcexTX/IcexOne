@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <corners android:radius="5dip" />
+            <solid android:color="@color/colorPrimary" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="1dip"
+        android:left="1dip"
+        android:right="1dip"
+        android:top="1dip">
+        <shape>
+            <solid android:color="@color/learn_daily_bottom_pressed" />
+            <corners android:radius="4dip" />
+        </shape>
+    </item>
+
+</layer-list>
