@@ -93,6 +93,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,
         main_viewpager.setCurrentItem(0);
         setImageMenu(0);
         main_viewpager.addOnPageChangeListener(this);
+        System.out.println("git 分支测试");
     }
 
     @Override
