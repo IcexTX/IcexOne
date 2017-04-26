@@ -1,9 +1,11 @@
 package com.example.icex.icexone.util;
 
+import android.content.Context;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.example.icex.icexone.R;
+import com.example.library.util.GlideRoundTransform;
 
 import java.util.Random;
 
@@ -119,12 +121,13 @@ public class ImgLoadUtil {
      * 书籍、妹子图、电影列表图
      * 默认图区别
      */
-    public static void displayEspImage(String url, ImageView imageView, int type) {
+    public static void displayEspImage(String url, ImageView imageView, int type, Context context) {
         Glide.with(imageView.getContext())
                 .load(url)
                 .crossFade(500)
                 .placeholder(getDefaultPicType(type))
                 .error(getDefaultPicType(type))
+                .transform(new GlideRoundTransform(context))
                 .into(imageView);
     }
 

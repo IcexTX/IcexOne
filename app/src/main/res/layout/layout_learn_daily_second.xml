@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dip"
-            android:ellipsize="end"
+            android:ellipsize="middle"
             android:lines="1"
             android:paddingRight="10dip"
             android:textColor="@color/daily_day_text"
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dip"
-            android:ellipsize="end"
+            android:ellipsize="middle"
             android:lines="1"
             android:textColor="@color/daily_day_text"
             android:textSize="@dimen/font_fourteen" />

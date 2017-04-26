@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">IcexOne</string>
+    <string name="night_mode">夜间模式</string>
+    <string name="day_mode">日间模式</string>
     <string name="setting">设置</string>
-    <string name="exit">退出程序</string>
+    <string name="exit">退出</string>
     <string name="replace_skin">更换皮肤</string>
     <string name="search">搜索</string>
     <string name="private_fm">私人FM</string>

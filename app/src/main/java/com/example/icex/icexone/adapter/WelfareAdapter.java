@@ -9,7 +9,7 @@ import com.example.icex.icexone.adapter.Able.WelfareAble;
 import com.example.icex.icexone.util.ImgLoadUtil;
 import com.example.library.base.BaseAdapter;
 import com.example.library.base.BaseViewHolder;
-import com.example.library.ganHuo.WelfareBean;
+import com.example.library.bean.WelfareBean;
 
 import java.util.List;
 
@@ -44,8 +44,8 @@ public class WelfareAdapter extends BaseAdapter<WelfareBean.ResultsEntity> {
     @Override
     protected void onBindDataToView(BaseViewHolder holder, final WelfareBean.ResultsEntity bean, final int position) {
         if (!TextUtils.isEmpty(bean.getUrl())) {
-            //2代表使用妹子默认图像
-            ImgLoadUtil.displayEspImage(bean.getUrl(), holder.getImageId(img_atlas), 1);
+            //1代表使用妹子默认图像
+            ImgLoadUtil.displayEspImage(bean.getUrl(), holder.getImageId(img_atlas), 1,context);
             holder.getImageId(img_atlas).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -58,9 +58,10 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <RelativeLayout
+            <FrameLayout
                 android:layout_width="60dip"
-                android:layout_height="60dip">
+                android:layout_height="60dip"
+                android:clickable="true">
 
                 <ImageButton
                     android:id="@+id/imgBtn_recommended"
@@ -69,16 +70,14 @@
                     android:background="@drawable/learn_daily_day_style" />
 
                 <TextView
+                    android:layout_gravity="center"
                     android:id="@+id/tv_day_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
                     android:text="XX"
                     android:textColor="@color/learn_daily_day_text"
                     android:textSize="@dimen/font_twenty_two" />
-
-            </RelativeLayout>
+            </FrameLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -100,7 +99,7 @@
                 android:id="@+id/imgBtn_read"
                 android:layout_width="60dip"
                 android:layout_height="60dip"
-                android:background="@drawable/learn_daily_recommend_style" />
+                android:background="@drawable/learn_daily_rank_style" />
 
             <TextView
                 android:layout_width="wrap_content"

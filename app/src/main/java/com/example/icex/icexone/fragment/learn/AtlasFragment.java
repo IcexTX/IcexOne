@@ -7,7 +7,7 @@ import com.example.icex.icexone.R;
 import com.example.icex.icexone.adapter.Able.WelfareAble;
 import com.example.icex.icexone.adapter.WelfareAdapter;
 import com.example.library.base.BaseFragment;
-import com.example.library.ganHuo.WelfareBean;
+import com.example.library.bean.WelfareBean;
 import com.example.library.httpRequest.HttpUtils;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 
@@ -113,6 +113,7 @@ public class AtlasFragment extends BaseFragment implements WelfareAble {
                             }
                         } else {
                             if (welfareBean != null && welfareBean.getResults() != null && welfareBean.getResults().size() > 0) {
+                                imgList.clear();
                                 entityList.addAll(welfareBean.getResults());
                                 xRecyclerView.refreshComplete();
                                 welfareAdapter.addDataList(welfareBean.getResults());

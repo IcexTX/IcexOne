@@ -4,51 +4,49 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/menu_discover"
-            android:icon="@mipmap/main_learn_normal"
+            android:icon="@drawable/w0"
             android:title="个人" />
 
         <item
             android:id="@+id/menu_music"
-            android:icon="@mipmap/main_music_normal"
+            android:icon="@drawable/ww"
             android:title="音乐" />
 
         <item
-            android:id="@+id/menu_friends"
-            android:icon="@mipmap/main_friends_normal"
-            android:title="朋友" />
-
-        <item
             android:id="@+id/menu_read"
-            android:icon="@mipmap/main_friends_normal"
+            android:icon="@drawable/wb"
             android:title="读书" />
 
         <item
             android:id="@+id/menu_move"
-            android:icon="@mipmap/main_friends_normal"
+            android:icon="@drawable/we"
             android:title="电影" />
-
-        <item
-            android:id="@+id/menu_switch_skin"
-            android:icon="@mipmap/main_friends_normal"
-            android:title="主题皮肤" />
 
         <item android:title="其他">
             <menu>
                 <item
-                    android:id="@+id/menu_about"
+                    android:id="@+id/menu_switch_skin"
                     android:checkable="true"
-                    android:icon="@mipmap/main_friends_normal"
-                    android:title="关于" />
+                    android:icon="@drawable/wc"
+                    android:title="主题皮肤" />
+
                 <item
-                    android:id="@+id/menu_retroaction"
+                    android:id="@+id/menu_clock"
                     android:checkable="true"
-                    android:icon="@mipmap/main_friends_normal"
-                    android:title="反馈" />
+                    android:icon="@drawable/ws"
+                    android:title="音乐闹钟" />
+
+                <item
+                    android:id="@+id/menu_stop"
+                    android:checkable="true"
+                    android:icon="@drawable/wx"
+                    android:title="定时停止播放" />
+
                 <item
                     android:id="@+id/menu_update"
                     android:checkable="true"
-                    android:icon="@mipmap/main_friends_normal"
-                    android:title="检查升级" />
+                    android:icon="@drawable/wy"
+                    android:title="软件更新" />
 
             </menu>
         </item>

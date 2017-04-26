@@ -2,9 +2,9 @@ package com.example.icex.icexone.model;
 
 import com.example.icex.icexone.model.Able.DailyModelAble;
 import com.example.icex.icexone.util.Constants;
-import com.example.library.ganHuo.BannerBean;
-import com.example.library.ganHuo.DailyContentBean;
-import com.example.library.ganHuo.GeneralContent;
+import com.example.library.bean.BannerBean;
+import com.example.library.bean.DailyContentBean;
+import com.example.library.bean.GeneralContent;
 import com.example.library.httpRequest.HttpUtils;
 
 import java.util.ArrayList;

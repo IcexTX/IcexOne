@@ -20,8 +20,8 @@ import com.example.icex.icexone.model.DailyModel;
 import com.example.icex.icexone.util.ACache;
 import com.example.icex.icexone.util.GlideImageLoader;
 import com.example.library.base.BaseFragment;
-import com.example.library.ganHuo.BannerBean;
-import com.example.library.ganHuo.GeneralContent;
+import com.example.library.bean.BannerBean;
+import com.example.library.bean.GeneralContent;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -29,6 +29,7 @@ import com.youth.banner.Transformer;
 import com.youth.banner.listener.OnBannerListener;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import rx.Subscription;
@@ -69,6 +70,7 @@ public class DailyFragment extends BaseFragment implements View.OnClickListener,
     //征文内容是否加载成功
     private boolean isContent = false;
     private DailyModel dailyModel;
+    private Calendar calendar;
 
     @Override
     protected int setView() {
@@ -95,6 +97,7 @@ public class DailyFragment extends BaseFragment implements View.OnClickListener,
 
     @Override
     protected void initData() {
+        calendar = Calendar.getInstance();
         dailyModel = new DailyModel();
         aCache = ACache.get(getActivity());
         //获取缓存中的图片地址数据
@@ -107,18 +110,44 @@ public class DailyFragment extends BaseFragment implements View.OnClickListener,
             animationDrawable.run();
         }
         nowTime = getDate();
-        String time = nowTime.substring(5, 7);
+        String time = nowTime.substring(8, 10);
         tv_day_title.setText(time.indexOf("0") == 0 ? time.replace("0", "") : time);
         imgBtn_personal.setOnClickListener(this);
         imgBtn_recommended.setOnClickListener(this);
         imgBtn_read.setOnClickListener(this);
         btn_adjust_order.setOnClickListener(this);
         setDataXrecyc();
+
     }
 
-    @Override
-    protected void getData() {
+    /**
+     * 获取每日数据
+     */
+    private void getServiceData() {
+        if (!isContent) {
+            String time[] = nowTime.split("-");
+            getContentData(time[0], time[1], time[2]);
+        }
+    }
 
+    /**
+     * 设置时间
+     */
+    private void setCalendar(String date) {
+        String[] setTime;
+        setTime = date.split("-");
+        int year = Integer.parseInt(setTime[0]);
+        int month = Integer.parseInt(setTime[1]);
+        int set_data = Integer.parseInt(setTime[2].substring(0, 2));
+        calendar.set(year, month - 1, set_data);
+    }
+
+
+    /**
+     * 获取时间
+     */
+    private String getDate(Calendar calendar) {
+        return dateFormat.format(calendar.getTime()).toString();
     }
 
     /**
@@ -162,8 +191,7 @@ public class DailyFragment extends BaseFragment implements View.OnClickListener,
             setBannerData();
         }
         header_banner.setOnBannerListener(this);
-        String time[] = nowTime.split("-");
-        getContentData(time[0], time[1], "05");
+        getServiceData();
     }
 
 
@@ -233,11 +261,25 @@ public class DailyFragment extends BaseFragment implements View.OnClickListener,
             @Override
             public void connectionFail() {
                 isContent = false;
+                setCalendar(nowTime);
+                calendar.add(Calendar.DATE, -1);
+                nowTime = getDate(calendar);
+                getServiceData();
             }
 
             @Override
             public void loadSuccess(Object result) {
-                dailyAdapter.setDataList((List<List<GeneralContent>>) result);
+                List<List<GeneralContent>> content = (List<List<GeneralContent>>) result;
+                if (content == null || content.isEmpty()) {
+                    isContent = false;
+                    setCalendar(nowTime);
+                    calendar.add(Calendar.DATE, -1);
+                    nowTime = getDate(calendar);
+                    getServiceData();
+                } else {
+                    isContent = true;
+                    dailyAdapter.setDataList(content);
+                }
             }
 
             @Override
@@ -281,8 +323,11 @@ public class DailyFragment extends BaseFragment implements View.OnClickListener,
         if (TextUtils.isEmpty(content.getTitle())) {
             showToast("");
         }
+    }
 
 
+    @Override
+    protected void getData() {
     }
 }
 

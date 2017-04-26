@@ -11,6 +11,10 @@ import com.example.library.base.BaseFragment;
  */
 
 public class MusicFragment extends BaseFragment {
+
+    private String url = "https://api.douban.com/v2/book/search?tag=%E7%BB%BC%E5%90%88&start=10&count=5";
+
+
     @Override
     protected int setView() {
         return R.layout.fragment_music;
@@ -23,7 +27,6 @@ public class MusicFragment extends BaseFragment {
 
     @Override
     protected void initData() {
-
     }
 
     @Override
