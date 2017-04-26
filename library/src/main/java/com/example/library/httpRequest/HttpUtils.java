@@ -33,7 +33,7 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 public class HttpUtils {
 
     private Context context;
-    private final String ReadingUrl = "";
+    private final String ReadingUrl = "https://api.douban.com/";
     private final String GangHuoUrl = "http://gank.io/api/";
     private final String MoveUrl = "";
     private final String MusicUrl = "";

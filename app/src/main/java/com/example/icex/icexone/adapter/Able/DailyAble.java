@@ -1,6 +1,6 @@
 package com.example.icex.icexone.adapter.Able;
 
-import com.example.library.ganHuo.GeneralContent;
+import com.example.library.bean.GeneralContent;
 
 /**
  * ProjectName：IcexOne

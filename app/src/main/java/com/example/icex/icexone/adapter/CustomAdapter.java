@@ -9,7 +9,7 @@ import com.example.icex.icexone.adapter.Able.CustomAble;
 import com.example.icex.icexone.util.ImgLoadUtil;
 import com.example.library.base.BaseAdapter;
 import com.example.library.base.BaseViewHolder;
-import com.example.library.ganHuo.WelfareBean;
+import com.example.library.bean.WelfareBean;
 
 import java.util.List;
 
@@ -60,7 +60,7 @@ public class CustomAdapter extends BaseAdapter<WelfareBean.ResultsEntity> {
         if (isAll && !TextUtils.isEmpty(bean.getType()) && "福利".equals(bean.getType())) {
             holder.getImageId(img_welfare).setVisibility(View.VISIBLE);
             holder.getLayoutId(layout_msg).setVisibility(View.GONE);
-            ImgLoadUtil.displayEspImage(bean.getUrl(), holder.getImageId(img_welfare), 1);
+            ImgLoadUtil.displayEspImage(bean.getUrl(), holder.getImageId(img_welfare), 1,context);
         } else {
             holder.getImageId(img_welfare).setVisibility(View.GONE);
             holder.getLayoutId(layout_msg).setVisibility(View.VISIBLE);

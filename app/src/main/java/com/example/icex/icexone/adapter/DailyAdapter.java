@@ -11,7 +11,7 @@ import com.example.icex.icexone.util.Constants;
 import com.example.icex.icexone.util.ImgLoadUtil;
 import com.example.library.base.BaseAdapter;
 import com.example.library.base.BaseViewHolder;
-import com.example.library.ganHuo.GeneralContent;
+import com.example.library.bean.GeneralContent;
 
 import java.util.List;
 

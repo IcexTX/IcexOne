@@ -1,4 +1,4 @@
-package com.example.library.ganHuo;
+package com.example.library.bean;
 
 import com.example.library.httpRequest.ParamNames;
 

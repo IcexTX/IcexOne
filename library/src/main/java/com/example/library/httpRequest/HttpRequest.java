@@ -1,11 +1,13 @@
 package com.example.library.httpRequest;
 
-import com.example.library.ganHuo.BannerBean;
-import com.example.library.ganHuo.DailyContentBean;
-import com.example.library.ganHuo.WelfareBean;
+import com.example.library.bean.BannerBean;
+import com.example.library.bean.BookBean;
+import com.example.library.bean.DailyContentBean;
+import com.example.library.bean.WelfareBean;
 
 import retrofit2.http.GET;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 import rx.Observable;
 
 /**
@@ -42,4 +44,23 @@ public interface HttpRequest {
      */
     @GET("data/{type}/{number}/{page}")
     Observable<WelfareBean> getWelfare(@Path("type") String type, @Path("number") int number, @Path("page") int page);
+
+    /**
+     * 根据tag获取图书
+     *  @Query表示请求参数，将会以key=value的方式拼接在url后面
+     * @param tag
+     * @param start
+     * @param count
+     * @return
+     */
+    @GET("v2/book/search")
+    Observable<BookBean> getBookData(@Query("tag") String tag, @Query("start") int start, @Query("count") int count);
+
+    /**
+     * 根据书的id进行书籍查询
+     * @param id
+     * @return
+     */
+    @GET("v2/book/{id}")
+    Observable<BookBean> getBookDetail(@Path("id") String id);
 }

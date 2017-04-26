@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#e12f41</color>
+    <color name="colorPrimary">#ce3d3a</color>
     <color name="colorPrimaryDark">#c02736</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorTheme">#FF4081</color>
@@ -14,6 +14,7 @@
     <color name="learn_daily_bottom_pressed">#e3a0a7</color>
     <color name="daily_day_text">#cc222222</color>
     <color name="black">#000000</color>
+    <color name="transparency">#00000000</color>
 
     <!--页面背景的颜色-->
     <color name="colorPageBg">#f2f4f5</color>
@@ -23,4 +24,14 @@
     <color name="tabBackground">#777D7D7D</color>
     <!--item的水波纹颜色-->
     <color name="itemBackground">#DD7D7D7D</color>
+
+    <color name="left_menu_font">#131313</color>
+    <!--用于分割线-->
+    <color name="division_line">#10000000</color>
+    <!--用于内容区域底色-->
+    <color name="background_content">#f2f4f5</color>
+    <!--用于内容区域底色-->
+    <color name="content_font">#333333</color>
+    <!--用于内容区域底色-->
+    <color name="main_left_page_pressed">#cccccc</color>
 </resources>

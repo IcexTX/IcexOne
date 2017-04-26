@@ -8,7 +8,7 @@ import com.example.icex.icexone.R;
 import com.example.icex.icexone.adapter.Able.CustomAble;
 import com.example.icex.icexone.adapter.CustomAdapter;
 import com.example.library.base.BaseFragment;
-import com.example.library.ganHuo.WelfareBean;
+import com.example.library.bean.WelfareBean;
 import com.example.library.httpRequest.HttpUtils;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 
